@@ -1,22 +1,14 @@
 ## DS_project2_2020_2
-### 2019-2 Data Structure Project#2
+### 2020-2 Data Structure Project#2
 
-### Due date: 2019/11/8 23h 59m 59s.
+### Due date: 2020/10/9 23h 59m 59s.
 
 
 
-#### 본 프로젝트는 여행 일정 관리 시스템을 구현하는 것으로 상세한 설명은 프로젝트 문서와 다음 설명을 참고한다.
-##### 여행 일정 관리 시스템은 사용자가 등록한 지역 및 도시 정보를 이용하여 도시 간의 이동 거리가 최소가 되도록 여행 일정을 설계해주는 시스템이다. 
-##### 본 프로젝트는 지정된 자료구조와 그래프를 활용하여 여행 일정 관리 시스템을 구축하는 것으로, 도시 정보는 도시의 이름을 기준으로 하여 AVL tree에 저장한다. 그리고 Graph를 이용하여 최단 거리를 가지는 여행 일정 그래프를 설계한다. 전체적인 시스템 구조는 다음과 같이 구성되어 있다. 
+#### 본 프로젝트는 질병 관리 프로그램을 구현하는 것으로 상세한 설명은 프로젝트 문서와 다음 설명을 참고한다.
+##### 본 프로젝트에서는 이진 탐색 트리(Binary Search Tree, BST)와 큐(Queue), 힙(Heap)을 이용하여 질병 관리 프로그램을 구현한다. 이 프로그램은 질병 의심 환자 데이터 이름, 체온, 기침 여부, 지역을 받아 Queue에 구축하며, 해당 Queue를 Patient_Queue라 부른다. Queue에서 pop 명령어를 실행하면 BST 구조에 저장된다. BST는 Location_BST, Patient_BST 두 종류로 구성된다. Location_BST는 지역 정보를 담고 있는 BST이고, Patient_BST는 각 Location_BST의 노드마다 하나씩 연결된 BST 이다. Patient_Queue에서 pop된 환자 데이터는 환자의 지역에 해당하는 노드에 속한 Patient_BST에 삽입되며, 이때, 질병 여부를 검증하여 양성 혹은 음성 여부를 ‘+’, ‘-’로 표기하여 저장한다. BST에서 pop 명령어를 실행하면 Location_MaxHeap 이라는 Heap 구조에 저장되며, 각 노드는 지역과 지역에 해당하는 환자 수를 기준으로 정렬된다. 
 
 ![image01](https://user-images.githubusercontent.com/50433145/93013979-ebc49180-f5e7-11ea-8803-b6ea05e82f25.png)
-##### Graph는 비방향성을 가지며 완전연결되어 있다. Graph의 노드는 도시정보를 가지고 있고, 간선으로는 연결된 두 도시의 위치정보의 차로 이루어져 있다. 총 5개의 노드에 대한 완전 연결 Graph에 대한 예시는 다음과 같다. 
-
-<img src="https://user-images.githubusercontent.com/50433145/66795037-571c6400-ef3e-11e9-81a1-59834655bdcc.JPG" width="50%">
-
-##### AVL tree는 도시의 이름을 기준으로 도시들의 객체 정보가 저장되어 있다. AVL tree를 구성하는 노드들은 Balance Factor(BF)를 가지고 있으며, 이를 활용하여 트리의 균형을 유지한다. AVL tree 구성의 예시는 다음과 같다. 
-
-<img src="https://user-images.githubusercontent.com/50433145/66795173-c8f4ad80-ef3e-11e9-837e-614d6897d65b.JPG" width="70%" height="70%">
 
 
 ## <u>**Notice**</u>
@@ -24,41 +16,19 @@
 ### (( 11/1 추가 사항 ))
 ![추가자료](https://user-images.githubusercontent.com/50433145/67996680-ce1e6000-fc93-11e9-8a13-b79125b31bb2.JPG)
 
-### 1. 프로젝트 문서 및 소스코드 수정사항 ( update 10/23 )
+### 1. 프로젝트 문서 및 소스코드 수정사항
 
 #### [2019_DS_Project2_ver2.pdf](https://github.com/DSLDataStorage/DS_project2_2019_2/files/3736999/2019_DS_Project2_ver2.pdf)
-#### [2019_DS_Project2_ver3.pdf](https://github.com/DSLDataStorage/DS_project2_2019_2/files/3742331/2019_DS_Project2_ver3.pdf)
-#### [2019_DS_Project2_ver4.pdf](https://github.com/DSLDataStorage/DS_project2_2019_2/files/3753691/2019_DS_Project2_ver4.pdf)
-#### [2019_DS_Project2_ver5.pdf](https://github.com/DSLDataStorage/DS_project2_2019_2/files/3759259/2019_DS_Project2_ver5.pdf)
 
 
 ```
-10/15 - 프로젝트 문서의 [그림 5] Graph 구성의 예 수정 ( 노드 번호를 도시의 이름순이 되도록 수정 ver2 )
-10/16 - Base 코드 Manager.cpp 수정 ( run() 내부에서 호출되는 함수 이름 수정 )
-10/17 - Base 코드 Graph.h 수정 ( 멤버 변수 mList, vertex 를 PDF 와 동일하게 수정 )
-10/18 - 프로젝트 문서의 Functional Requirement의 SEARCH_AVL 사용법 수정 ( 도시 이름 -> 도시위치정보 ) 
-10/22 - 프로젝트 문서의 Functional Requirement의 INSERT 에러 코드 오타 수정( 100 -> 200 )
-      - 프로젝트 문서의 구현시 반드시 정의해야하는 Class 멤버 변수의 4.Graph 클래스의 멤버 변수의 이름을 matrix(=mList), mst(=mstMatrix)
-        와같이 두 이름 모두 가능하도록 표기하여 수정
-10/23 - new) 프로젝트 문서의 Functional Requirement의 SEARCH_AVL과 DELETE_AVL의 에러코드를 Error code 표에 명시한거와 같이 수정 ( 
-            SEARCH_AVL - 500 , DELETE_AVL - 400 )
-       - 그림 3의 Graph 클래스의 Size변수의 사용여부는 선택사항
+9/14 - ver1 업로드
 ```
 
 
 ### 2. 자주들어오는 질문 
 **Q. base 코드의 멤버변수가 public으로 되어 있어요~**  
 A. 그냥 private으로 된것처럼 get/set함수를 이용해서 멤버변수를 이용해주시면 됩니다.   
-
-
-**Q. LOAD랑 INSERT도 명령어 인자 추가 혹은 부족할때 예외처리해야하나요??**  
-A. LOAD랑 INSERT는 그런 경우가 없다고 가정하였으니 안해도됩니다!! 
-
-**Q. SEARCH_AVL 이랑 DELETE_AVL 의 에러코드는 각각 뭔가요??**    
-A. 표에 나와있는것으로 해서 SEARCH_AVL은 500, DELETE_AVL은 400 입니다. Manager.cpp의 run() 함수에 선언된 순서와 헷갈리시지 않길 바랍니다!!
-
-**Q. City list 파일의 구분자는 무엇인가요?**    
-A. 모두 탭으로 구분해서 고유번호와 도시 이름, 나라 이름을 구분해서 입력하시면 됩니다!
 
 --------------------------
 ### Knowledge 
@@ -83,24 +53,17 @@ $ pwd
 ##### 먼저 해당 github에 저장되어 있는 base 코드를 다운받는다.
 ```
 $ sudo apt-get install git
-$ git clone https://github.com/DSLDataStorage/DS_project2_2019_2.git
-```
-##### 특정 디렉토리에서 ls 명령어를 입력하였을때, 다음과 같이 필요한 모든 소스코드와 텍스트파일, Makefile이 존재해야한다.
-```
-$ ls
-AVLNode.cpp AVLNode.h AVLTree.cpp AVLTree.h city_list.txt CityData.cpp CityData.h command.txt Graph.cpp
-Graph.h log.txt main.cpp Makefile Manager.cpp Manager.h
+$ git clone https://github.com/DSLDataStorage/DS_Project_1_2020_2.git
 ```
 
 ### how to compile this project
 ##### make명령어 실행 후 ls명령어를 통해 해당 디렉토리를 확인해 보면 run 이라는 파일이 생긴것을 확인 할 수 있다. 
 ```
 $ make
-g++ -std=c++11 -g -o run AVLNode.cpp AVLTree.cpp CityData.cpp Manager.cpp Graph.cpp main.cpp AVLTree.h Manager.h Graph.h AVLNode.h CityData.h
+g++ -std=c++11 -g -o run LocationBST.cpp Location.h LocationHeap.cpp LocationHeap.h LocationHeapNode.cpp LocationHeapNode.h LocationNode.cpp LocationNode.h main.cpp Manager.cpp Manager.h PatientBST.cpp PatientBST.h PatientBSTNode.cpp PatientBSTNode.h PatientNode.cpp PatientNode.h
 
 $ ls
-AVLNode.cpp AVLNode.h AVLTree.cpp AVLTree.h city_list.txt CityData.cpp CityData.h command.txt Graph.cpp
-Graph.h log.txt main.cpp Makefile Manager.cpp **run** Manager.h
+LocationBST.cpp Location.h LocationHeap.cpp LocationHeap.h LocationHeapNode.cpp LocationHeapNode.h LocationNode.cpp LocationNode.h main.cpp Manager.cpp Manager.h PatientBST.cpp PatientBST.h PatientBSTNode.cpp PatientBSTNode.h PatientNode.cpp PatientNode.h **run**
 ```
 ### how to run code
 ##### ./(생성된 실행파일) 의 형식으로 생성된 run 실행파일을 실행한다.
