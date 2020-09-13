@@ -1,5 +1,5 @@
-## DS_project2_2020_2
-### 2020-2 Data Structure Project#2
+## DS_project1_2020_2
+### 2020-2 Data Structure Project #1
 
 ### Due date: 2020/10/9 23h 59m 59s.
 
