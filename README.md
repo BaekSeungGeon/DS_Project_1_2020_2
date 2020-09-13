@@ -1,4 +1,4 @@
-## DS_project2_2019_2
+## DS_project2_2020_2
 ### 2019-2 Data Structure Project#2
 
 ### Due date: 2019/11/8 23h 59m 59s.
@@ -9,8 +9,7 @@
 ##### 여행 일정 관리 시스템은 사용자가 등록한 지역 및 도시 정보를 이용하여 도시 간의 이동 거리가 최소가 되도록 여행 일정을 설계해주는 시스템이다. 
 ##### 본 프로젝트는 지정된 자료구조와 그래프를 활용하여 여행 일정 관리 시스템을 구축하는 것으로, 도시 정보는 도시의 이름을 기준으로 하여 AVL tree에 저장한다. 그리고 Graph를 이용하여 최단 거리를 가지는 여행 일정 그래프를 설계한다. 전체적인 시스템 구조는 다음과 같이 구성되어 있다. 
 
-![main](https://user-images.githubusercontent.com/50433145/66695287-cace2f00-ecfa-11e9-97a4-c6b94d33474e.JPG)
-
+![image01](https://user-images.githubusercontent.com/50433145/93013979-ebc49180-f5e7-11ea-8803-b6ea05e82f25.png)
 ##### Graph는 비방향성을 가지며 완전연결되어 있다. Graph의 노드는 도시정보를 가지고 있고, 간선으로는 연결된 두 도시의 위치정보의 차로 이루어져 있다. 총 5개의 노드에 대한 완전 연결 Graph에 대한 예시는 다음과 같다. 
 
 <img src="https://user-images.githubusercontent.com/50433145/66795037-571c6400-ef3e-11e9-81a1-59834655bdcc.JPG" width="50%">
