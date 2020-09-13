@@ -13,12 +13,11 @@
 
 ## <u>**Notice**</u>
 --------------------------
-### (( 11/1 추가 사항 ))
-![추가자료](https://user-images.githubusercontent.com/50433145/67996680-ce1e6000-fc93-11e9-8a13-b79125b31bb2.JPG)
+
 
 ### 1. 프로젝트 문서 및 소스코드 수정사항
 
-#### [2019_DS_Project2_ver2.pdf](https://github.com/DSLDataStorage/DS_project2_2019_2/files/3736999/2019_DS_Project2_ver2.pdf)
+#### [2020_DS_Project1_ver1.pdf](https://github.com/DSLDataStorage/DS_Project_1_2020_2/files/5213816/2020_DS_Project1_ver1.pdf)
 
 
 ```
