@@ -19,7 +19,6 @@
 
 #### [2020_DS_Project1_ver1.pdf](https://github.com/DSLDataStorage/DS_Project_1_2020_2/files/5213816/2020_DS_Project1_ver1.pdf)
 
-
 ```
 9/14 - ver1 업로드
 ```
@@ -66,7 +65,7 @@ LocationBST.cpp Location.h LocationHeap.cpp LocationHeap.h LocationHeapNode.cpp 
 ```
 ### how to run code
 ##### ./(생성된 실행파일) 의 형식으로 생성된 run 실행파일을 실행한다.
-##### 실행하면 결과로 log.txt파일이 생성되면서 결과가 log.txt 에 저장된다. (아래 log.txt 파일의 출력결과는 base 코드의 출력 예시임으로 실제 base 코드에서는 LOAD 명령어를 수행하여 AVL에 저장하는 부분이 포함되어 있지 않음) 
+##### 실행하면 결과로 log.txt파일이 생성되면서 결과가 log.txt 에 저장된다. 
 ```
 $ ./run
 $ cat log.txt
